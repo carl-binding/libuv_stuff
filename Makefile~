@@ -1,0 +1,12 @@
+CC=cc
+
+STATIC_LIBRARIES=/usr/local/lib/libuv.a -pthread
+
+
+all: hello-static 
+
+hello-static: hello.c
+	$(CC) -o hello-static hello.c $(STATIC_LIBRARIES)
+
+
+
